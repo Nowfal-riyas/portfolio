@@ -1,0 +1,394 @@
+/* navbar section */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+
+}
+.header-bg{
+    background-color: rgb(9, 9, 30, 0.9);
+    transition:0.5s;
+}
+
+.nav_links{
+    display:flex;
+}
+
+.nav_links li{
+    padding: 0 1rem;
+    margin: 0 2px;
+}
+
+.nav_links a{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hamburger_menu{
+    display: none;
+}
+
+@media screen and (max-width: 1040px) {
+    .nav_links{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:100vh;
+        background-color: rgb(9, 9, 30);
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: -3;
+        transition: 2s;
+    }
+    .nav_links.active{
+        left: 0;
+    }
+    .nav_links li{
+        padding: 1rem 0;
+    
+    }
+    .nav_links a{
+        font-size: 1.5rem;
+    }
+    .hamburger_menu{
+        display: initial;
+    }
+    
+}
+
+/* Hero Section */
+
+.mask{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.intro_img{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.mask::after{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.8;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.hero{
+    height: 100vh;
+    width:100%;
+}
+
+.hero .content{
+    position: relative;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    text-align: center;
+}
+
+.hero .content h1{
+font-size: 3rem;
+font-weight: 500;
+padding: 0rem 0 2rem 0;
+}
+
+.hero .content p{
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.content .btn {
+    margin: 1rem 0.5rem;
+}
+
+@media screen and (max-width: 640px) {
+    .hero .content h1{
+        font-size: 2rem;
+        font-weight: 500;
+        }
+        
+        .hero .content p{
+            font-size: 1.4rem;
+        }
+        
+}
+
+/* Footer Setion */
+
+.footer{
+    width:100%;
+    padding:3rem 0 1rem 0;
+    background-color: rgb(6, 6, 59);
+}
+
+.footer_container{
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+
+}
+
+.left{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.location{
+    display: flex;
+}
+
+.location p{
+    line-height: 20px;
+}
+
+.right{
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.social{
+    margin-top: 1rem
+}
+
+.right h4{
+    font-size: 1.2rem;
+    padding-bottom: 0.7rem;
+}
+
+.right p{
+    font-size:1.2rem;
+}
+
+@media screen and (max-width:640px) {
+    
+    .footer_container{
+        grid-template-columns: 1fr;
+    
+    }
+}
+
+/* Hero ImageSection 2 */
+
+.hero_img{
+
+    width: 100%;
+    background-color: (0, 0, 0, 0.5);
+    height: 60vh;
+    position: relative;
+}
+
+.hero_img::before{
+
+    content:"";
+    background-size:cover;
+    background: url("https://wallpaper.forfun.com/fetch/7d/7d561534a96cf08d6c708ea0d5b32a83.jpeg");
+    background-position:center;
+    height: 100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.heading{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_img h1{
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.hero_img p{
+    font-size: 1.4rem;
+    text-align:center;
+}
+
+@media screen and (max-width: 640px){
+    .hero_img h1{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+
+
+/* Project Container */
+
+.project_heading{
+    text-align:center;
+    padding: 2rem 0 2rem 0;
+    font-weight: 500;
+}
+
+.project_container{
+    max-width: 1140px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    padding-bottom: 5rem;
+}
+
+.project_card{
+    background:rgba(3, 3, 16, 0.2);
+    padding: 1.2rem 1rem;
+    border-radius: 5px;
+    border: 1.5px solid rgb(255, 255, 255);
+}
+
+.project_card img{
+    width:100%;
+}
+
+.project_title{
+    color:aliceblue;
+    padding: 1rem 0;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.pro_details p{
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.pro_btns{
+    display:flex;
+    justify-content: center;
+    padding-block: 1rem;
+}
+
+@media screen and (max-width: 740px){
+    .project_container{
+        max-width: 90%;
+        margin:auto;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* About Content */
+
+.about{
+    width:100%;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height:100%;
+}
+
+.about .about_left{
+    text-align: center;
+    margin: auto;
+    padding:1rem;
+    max-width:450px;
+}
+
+.about .about_left h1{
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.about .about_left p{
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    justify-content: start;
+}
+
+.about .about_right{
+    max-width: 600px;
+    margin: 2rem 3rem 2rem 3rem;
+}
+
+.about_right .img_container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.about_right .img{
+    max-width: 90%;
+    border: 1px solid #333;
+}
+
+.about_right .top{
+    grid-column: 1/ span 8;
+    grid-row: 1;
+    padding-top: 20%;
+    z-index: 6;
+}
+
+.about_right .bottom{
+    grid-column: 4/ -1;
+    grid-row: 1;
+    z-index: 5;
+}
+
+/* Contact us Form*/
+
+label{
+    color:aliceblue;
+    margin-bottom: 0.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1rem;
+    margin: auto;
+    max-width: 600px;
+}
+
+form input, form textarea{
+    margin-bottom: 1rem;
+    padding: 10px 18px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+    color:aliceblue;
+}
+
+textarea >placeholder{
+    color:#000
+}
