@@ -137,7 +137,7 @@ padding: 0rem 0 2rem 0;
 .footer{
     width:100%;
     padding:3rem 0 1rem 0;
-    background-color: rgb(6, 6, 59);
+    background-color: rgb(28, 112, 145);
 }
 
 .footer_container{
@@ -208,8 +208,9 @@ padding: 0rem 0 2rem 0;
 
     content:"";
     background-size:cover;
-    background: url("https://wallpaper.forfun.com/fetch/7d/7d561534a96cf08d6c708ea0d5b32a83.jpeg");
+    background: url("https://t4.ftcdn.net/jpg/04/95/28/65/360_F_495286577_rpsT2Shmr6g81hOhGXALhxWOfx1vOQBa.jpg");
     background-position:center;
+    opacity: 0.7;
     height: 100%;
     width:100%;
     position: absolute;
