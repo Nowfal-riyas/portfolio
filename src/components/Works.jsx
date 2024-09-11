@@ -16,7 +16,7 @@ const Works = () => {
             <p>I have developed this project with React js and back end with flask api
               we can find details of the number plate by giving an Input and can store and modify users </p>
             <div className='pro_btns'>
-              <NavLink target="_blank" to="https://github.com/Nowfal-riyas/number-plate-project/settings" className="btn">Git Source</NavLink>
+              <NavLink target="_blank" to="https://github.com/Nowfal-riyas/number-plate-project" className="btn">Git Source</NavLink>
             </div>
           </div>
         </div>

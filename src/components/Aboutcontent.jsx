@@ -10,7 +10,6 @@ const Aboutcontent = () => {
       <div className='about_left'>
         <h1>Who Am I ?</h1>
         <p>I'm a Full stack Application developer. <br/><br/>
-        Programming Languages: Python, JavaScript, Dart.<br/><br/>
         Front end: HTML, CSS, Bootstrap.<br/><br/>
         Mobile App: Flutter, Firebase.<br/><br/>
         Back end: Flask, Rest Api, Postman.<br/><br/>
