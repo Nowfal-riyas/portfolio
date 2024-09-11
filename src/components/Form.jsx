@@ -100,17 +100,9 @@ const Form = () => {
         value={formdata.message}
         onChange={handleChange}
         required/>
-        <button className='btn'>{
-          submitting == false ? (
-            <p style={{
-              color: "black",
-              fontSize: "16px"
-            }}>Submit</p>
-          ):(<p style={{
-            color: "black",
-            fontSize: "16px"
-          }}>Submitting...</p>)
-          }</button>
+        <button className='btn' disabled={submitting}>
+        {submitting ? 'Submitting...' : 'Submit'}
+        </button>
       </form>
     </div>
   )
