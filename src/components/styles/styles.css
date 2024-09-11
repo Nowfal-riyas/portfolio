@@ -317,7 +317,7 @@ padding: 0rem 0 2rem 0;
 }
 
 .about .about_left{
-    text-align: center;
+    text-align: start;
     margin: auto;
     padding:1rem;
     max-width:450px;
@@ -326,12 +326,18 @@ padding: 0rem 0 2rem 0;
 .about .about_left h1{
     font-weight: 500;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .about .about_left p{
     margin: 0 0 1.5rem 0;
     display: flex;
     justify-content: start;
+}
+
+.about .about_left .btn{
+    display: flex;
+    justify-content: center;
 }
 
 .about .about_right{
