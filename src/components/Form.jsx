@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 
 const Form = () => {
   //useState
+  const [submitting, setSubmitting] = useState(false);
   const [formdata, setFormdata] = useState({
     name:"",
     email:"",
@@ -19,6 +20,7 @@ const Form = () => {
 
   const handleSubmit = async (event) =>{
     event.preventDefault();
+    setSubmitting(true);
 
     try {
       
@@ -50,6 +52,8 @@ const Form = () => {
       text: "Form Submitted Sucessfully",
       icon: "success"
     });
+
+    setSubmitting(false);
 
     
     } catch (error) {
@@ -96,7 +100,17 @@ const Form = () => {
         value={formdata.message}
         onChange={handleChange}
         required/>
-        <button className='btn'>Submit </button>
+        <button className='btn'>{
+          submitting == false ? (
+            <p style={{
+              color: "black",
+              fontSize: "16px"
+            }}>Submit</p>
+          ):(<p style={{
+            color: "black",
+            fontSize: "16px"
+          }}>Submitting...</p>)
+          }</button>
       </form>
     </div>
   )
